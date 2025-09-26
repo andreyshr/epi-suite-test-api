@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import "dotenv/config";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [];
 
 app.use(express.json());
